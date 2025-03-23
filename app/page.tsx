@@ -2,102 +2,97 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-white text-gray-800">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            翁晓敏
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Web 开发者 | UI 设计师 | 创意工作者
+          </p>
+          <p className="max-w-2xl mx-auto text-gray-500">
+            欢迎来到我的个人网站。我专注于创建美观且用户友好的网络应用程序，
+            热爱将创意想法转化为现实。
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="container mx-auto px-4 py-16 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">技能专长</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">0代码产品开发</h3>
+            <p className="text-gray-600 mb-4">
+              实操达人，自学Cursor、Claude、Coze等软件，制作网页/小程序/智能体等10+产品，开发周期缩短至3小时。
+            </p>
+            <div className="mt-4">
+              <details className="cursor-pointer">
+                <summary className="text-blue-600 hover:text-blue-700">查看项目列表</summary>
+                <ul className="mt-2 pl-4 text-gray-600">
+                  <li>• AI Agent智能体</li>
+                  <li>• 图片压缩网站</li>
+                  <li className="text-blue-600 hover:text-blue-700">
+                    <a href="#">更多项目 →</a>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">AI狂热爱好者</h3>
+            <p className="text-gray-600 mb-4">
+              定期拆解A16Z最新Top100的AI产品的核心价值与潜在风险，拆解技术、体验、商业三维度。
+            </p>
+            <a 
+              href="https://oc5dk59vnu.feishu.cn/docx/G1smdyjmloct8kxWZtGc2qSRnvc"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-700"
+            >
+              查看详细分析 →
+            </a>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">Prompt Engineering深度玩家</h3>
+            <p className="text-gray-600 mb-4">
+              针对GPT系列及头部模型，累积编写近千个Prompt，对多个模型能力边界有深入把握。
+            </p>
+            <a 
+              href="https://oc5dk59vnu.feishu.cn/docx/YowVd7zQco2balxGERncbjoInSc"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-700"
+            >
+              浏览Prompt案例 →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="container mx-auto px-4 py-16 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">联系我</h2>
+        <div className="max-w-md mx-auto text-center">
+          <p className="text-gray-600 mb-6">
+            如果你对我的工作感兴趣，或者想要讨论潜在的合作机会，
+            请随时通过以下方式联系我。
+          </p>
+          <div className="space-x-6">
+            <a href="mailto:wengxiaomin125@163.com" className="text-blue-600 hover:text-blue-700">
+              Email
+            </a>
+            <a href="https://github.com/11wxm" className="text-blue-600 hover:text-blue-700">
+              GitHub
+            </a>
+            <a href="#" className="text-blue-600 hover:text-blue-700">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
